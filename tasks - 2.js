@@ -1,8 +1,8 @@
 "use strict";
 
-function getPrimeNum(num) {
+function isPrimeNum(num) {
   let result = true;
-  if (num > 1000) {
+  if ((num < 2) || (num > 1000)) {
     return "Данные неверны!";
   } else {
     for (let i = 2; i <= num - 1; i++) {
@@ -16,13 +16,13 @@ function getPrimeNum(num) {
     } else return `${num} - НЕ простое число`;
   }
 }
-console.log(getPrime(5));
-console.log(getPrimeNum(1001));
+console.log(isPrime(5));
+console.log(isPrimeNum(1001));
 //--------------------------------------------------------------------
-function getPrime(num) {
+function isPrime(num) {
   let i = 2;
   let result = 0;
-  if (num > 1000) {
+  if ((num < 2) || (num > 1000)) {
     return "Данные неверны!";
   } else {
     while (i < num + 1) {
@@ -38,5 +38,5 @@ function getPrime(num) {
     } else return `${num} - НЕ простое число`;
   }
 }
-console.log(getPrime(1001));
-console.log(getPrime(6));
+console.log(isPrime(1001));
+console.log(isPrime(6));
