@@ -3,7 +3,7 @@
 function getPrimeNum(num) {
   let result = true;
   if (num > 1000) {
-    return "Данные не верны!";
+    return "Данные неверны!";
   } else {
     for (let i = 2; i <= num - 1; i++) {
       if (num % i == 0) {
@@ -23,7 +23,7 @@ function getPrime(num) {
   let i = 2;
   let result = 0;
   if (num > 1000) {
-    return "Данные не верны!";
+    return "Данные неверны!";
   } else {
     while (i < num + 1) {
       if (num % i !== 0) i++;
