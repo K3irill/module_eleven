@@ -1,5 +1,5 @@
 'use strict'
-
+// это не задание.
 let obj = new Object();
 
 obj.name = 'Taller';
