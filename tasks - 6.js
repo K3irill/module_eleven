@@ -1,13 +1,22 @@
 'use strict'
 // это не задание.
-let obj = new Object();
+let object = new Object();
 
-obj.name = 'Taller';
-obj.age = 20;
-obj.forDelete = 'trash'
+object.name = 'Taller';
+object.age = 20;
+object.forDelete = 'trash'
 
-console.log(obj);
+console.log(object);
 
-delete obj.forDelete;
+delete object.forDelete;
 
-console.log(obj);
+console.log(object);
+
+let obj = {
+    key: 'value',
+};
+
+delete obj['root.submodule.item'];
+
+console.log('123' in obj);
+
