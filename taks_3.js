@@ -5,7 +5,8 @@ function checkFun(fun) {
   if (input.value < 1 || input.value > 10) {
     return alert(`«число вне диапазона от 1 до 10».`);
   } else {
-    fun("https://jsonplaceholder.typicode.com/photos?_limit=8", displayResults);
+    let url = `https://jsonplaceholder.typicode.com/photos?_limit=${input.value}`
+    fun(url, displayResults);
   }
 }
 
