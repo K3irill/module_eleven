@@ -4,29 +4,28 @@ const button = document.getElementById("button");
 function checkFun(fun) {
   if (input.value < 1 || input.value > 10) {
     return alert(`«число вне диапазона от 1 до 10».`);
-  } else {
-    let url = `https://jsonplaceholder.typicode.com/photos?_limit=${input.value}`
-    fun(url, displayResults);
   }
+  let url = `https://jsonplaceholder.typicode.com/photos?_limit=${input.value}`;
+  fun(url, displayResults);
 }
 
 function callRequest(url, callback) {
-  let requset = new XMLHttpRequest();
-  requset.open("GET", url, true);
-  requset.onload = function () {
-    if (requset.status != 200) {
-      console.log(`Status: ${requset.status}`);
+  let request = new XMLHttpRequest();
+  request.open("GET", url, true);
+  request.onload = function () {
+    if (request.status != 200) {
+      console.log(`Status: ${request.status}`);
     } else {
-      const result = JSON.parse(requset.response);
+      const result = JSON.parse(request.response);
       if (callback) {
         callback(result);
       }
     }
   };
-  requset.onerror = function () {
-    console.log("Ошибка! Статус ответа: ", requset.status);
+  request.onerror = function () {
+    console.log("Ошибка! Статус ответа: ", request.status);
   };
-  requset.send();
+  request.send();
 }
 
 const resultsBlock = document.querySelector(".results");
