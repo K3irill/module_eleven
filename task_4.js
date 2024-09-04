@@ -2,12 +2,11 @@ const button = document.querySelector("button");
 const resultBlock = document.querySelector(".results");
 const values = document.querySelectorAll("#itext");
 
-button.addEventListener("click", requset);
+button.addEventListener("click", request);
 
-function requset() {
-  const values = document.querySelectorAll("#itext");
-  let width = values[0].value;
-  let height = values[1].value;
+function request() {
+  let width = Number(values[0].value);
+  let height = Number(values[1].value);
   if ((width < 100 || width > 300) || (height < 100 || height > 300)) {
     return console.log("erroooooor");
   } else {
