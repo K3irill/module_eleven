@@ -1,32 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Task-3</title>
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div class="wrapper">
-        <div class="chat">
-            <div class="chat__container">
-                <div class="chat__body">
-                    <div class="chat__header">
-                        <div class="chat__header_text">
-                            <h2 class="chat__header_title"></h2>
-                        </div>
-                    </div>
-                    <div class="chat__main-field"></div>
-                    <div class="chat__enter-field ch-enter-field">
-                        <form id="mesg-form">
-                            <input class="ch-enter-field_input-mesg" type="text" placeholder="Start typing...">
-                        </form>
-                        <button class="ch-enter-field_btn"></button>
-                    </div>
-                </div>
+      <div class="chat">
+        <div class="chat__container">
+          <div class="chat__body">
+            <div class="chat__header">
+              <div class="chat__header_text">
+                <h2 class="chat__header_title">Echo chat</h2>
+              </div>
             </div>
+            <hr />
+            <div id="output" class=" chat__main-field">
+              
+            </div>
+            <hr />
+            <div class="chat__enter-field ch-enter-field">
+              <!-- <form id="mesg-form"> -->
+              <input
+              id="message-input"
+                class="ch-enter-field_input-mesg"
+                type="text"
+                placeholder="Start typing..."
+              />
+              <!-- </form> -->
+              <button id="btn-send" class="ch-enter-field_btn">Send</button>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
