@@ -28,8 +28,9 @@
 }
 .chat__main-field_mesg {
   max-width: 250px;
-  min-height: 20px;
+  max-height: 100%;
   padding: 10px;
+  word-wrap: break-word;
   border-radius: 5px;
 }
 .chat__main-field_user-mesg {
@@ -53,6 +54,10 @@
   border: none;
   width: 100%;
   height: 30px;
+}
+.ch-enter-field_input-mesg:active, .ch-enter-field_input-mesg:hover, .ch-enter-field_input-mesg:focus {
+  outline: 0;
+  outline-offset: 0;
 }
 .ch-enter-field_btn {
   margin-right: 10px;

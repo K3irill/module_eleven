@@ -21,18 +21,29 @@ class EchoChat {
     this.parg.innerHTML = message;
     this.output.appendChild(this.parg);
   }
-  initEvents() {
-    this.btnSend.addEventListener("click", () => {
-      const message = this.messageInput.value;
+  sendMessage() {
+    const message = this.messageInput.value;
+    if (message.trim()) {
       this.writeToScreen(message);
       this.websocket.send(message);
       this.messageInput.value = "";
+    }
+  }
+  initEvents() {
+    this.btnSend.addEventListener("click", () => {
+      this.sendMessage();
+    });
+    this.messageInput.addEventListener("keydown", (event) => {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        this.sendMessage();
+      }
     });
   }
-  initWebSocketEvents(){
-    this.websocket.onmessage = event => {
-        this.writeToScreen(event.data, true)
-    }
+  initWebSocketEvents() {
+    this.websocket.onmessage = (event) => {
+      this.writeToScreen(event.data, true);
+    };
   }
 }
 
